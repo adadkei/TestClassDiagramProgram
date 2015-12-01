@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import com.change_vision.jude.api.inf.AstahAPI;
 import com.change_vision.jude.api.inf.exception.LicenseNotFoundException;
 import com.change_vision.jude.api.inf.exception.NonCompatibleException;
 import com.change_vision.jude.api.inf.exception.ProjectLockedException;
@@ -19,7 +20,6 @@ import com.change_vision.jude.api.inf.model.IPackage;
 import com.change_vision.jude.api.inf.model.IParameter;
 import com.change_vision.jude.api.inf.model.IRealization;
 import com.change_vision.jude.api.inf.project.ProjectAccessor;
-import com.change_vision.jude.api.inf.AstahAPI;
 
 /**
  * Class to build class definition from selected project.
@@ -36,6 +36,7 @@ public class ClassDefinitionBuilder {
      */
     public ClassDefinitionBuilder(String inputFile) {
         this.inputFile = inputFile;
+        System.out.println(inputFile);
     }
 
     /**
@@ -62,6 +63,7 @@ public class ClassDefinitionBuilder {
         ProjectAccessor prjAccessor = AstahAPI.getAstahAPI().getProjectAccessor();
         prjAccessor.open(inputFile);
         IModel iModel = prjAccessor.getProject();
+    	
 
         List contents = new ArrayList();
         contents.add(getHeader());
