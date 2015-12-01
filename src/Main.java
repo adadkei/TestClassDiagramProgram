@@ -13,7 +13,7 @@ public class Main {
 	
 		
 		List classContents;
-		ClassDiagramFinder cdf = new ClassDiagramFinder("C:\\Users\\Ikemi\\Desktop\\class_diagram.asta");
+		ClassDiagramFinder cdf = new ClassDiagramFinder("class_diagram.asta");
 		System.out.println("プロジェクトは取得済み");
 		classContents = cdf.getIClasses(cdf.getiModel());
 		System.out.println("クラス数は"+classContents.size()+"個");
