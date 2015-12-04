@@ -29,6 +29,7 @@ public class ClassDiagramFinder {
 		ProjectAccessor prjAccessor = AstahAPI.getAstahAPI().getProjectAccessor();
 		prjAccessor.open(inputFile);
 		iModel = prjAccessor.getProject();
+		prjAccessor.close();
 	}
 
 	/**
