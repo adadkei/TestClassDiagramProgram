@@ -17,6 +17,8 @@ public class ClassDiagramFinder {
 	ProjectAccessor prjAccessor;
 	String inputFile;
 	IModel iModel;
+    private static final String EMPTY_COLUMN = "";
+
 
 	/**
 	 * @param inputFile
@@ -50,6 +52,7 @@ public class ClassDiagramFinder {
 		}
 		return iClasses;
 	}
+	
 
 	public IModel getiModel() {
 		return iModel;
