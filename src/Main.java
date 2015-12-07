@@ -19,7 +19,7 @@ public class Main {
 
 		List<INamedElement> classContents;
 	
-		ClassDefinitionBuilder cdb = new ClassDefinitionBuilder("testclass.asta");
+		ClassDefinitionBuilder cdb = new ClassDefinitionBuilder("class_diagram.asta");
 		System.out.println("プロジェクトは取得済み");
 		classContents = cdb.getContents();
 
